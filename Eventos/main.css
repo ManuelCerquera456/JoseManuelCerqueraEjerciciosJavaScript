@@ -21,7 +21,7 @@ main {
 }
 
 footer {
-    height: 80px;
+    height: 40px;
 }
 
 .card {
@@ -33,3 +33,4 @@ footer {
     max-height: 70px; 
     overflow-y: auto;
 }
+
