@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de eventos Misraim Hernandez</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <header
+        class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom shadow p-3 bg-body-tertiary rounded sticky-top">
+        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none px-5">
+            <img class="bi me-2 d-inline-block align-text-top"
+                src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="Logo" height="50px">
+            <span class="fs-4"> Eventos | Ejercicios</span>
+            <h1 hidden> Eventos | Ejercicios </h1>
+        </a>
+
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <img src="https://st4.depositphotos.com/21557188/23287/v/1600/depositphotos_232875348-stock-illustration-hamburger-menu-web-icon-white.jpg"
+                            alt="Menu">
+                    </span>
+                </button>
+
+                <div class="collapse navbar-collapse d-flex flex-wrap justify-content-around" id="navbarNav">
+                    <div class=" navbar-nav d-flex flex-wrap justify-content-around">
+                        <a class="nav-link active" aria-current="page" href="#container-calculadora-imc">Calculadora
+                            IMC</a>
+                        <a class="nav-link" href="#container_convertidor_moneda">Conversor Divisa</a>
+                        <a class="nav-link" href="#container_tareas">Mis Tareas</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <div class="row">
+
+                <div id="container_form_tareas" class=" col-6 p-3">
+                    <form id="form-nota"
+                        class=" container d-flex flex-column align-items-center bg-info border border-5 rounded-3 p-3">
+                        <h3 class="mb-1">Nueva Nota</h3>
+
+                        <div class="container p-3">
+                            <input type="text" class="form-control mb-2" id="titulo" name="titulo" placeholder="Titulo" required>
+                            <textarea class="form-control container" id="texto" name="texto" placeholder="Descripcion" required></textarea>
+                        </div>
+
+                        <div class=" container d-flex justify-content-center mb-3">
+                            <button type="submit" class="btn btn-success mx-3" id="btn_agregar_tarea">Agregar</button>
+                            <button type="button" class="btn btn-danger mx-3" id="btn_limpiar">Limpiar</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div id="container-calculadora-imc" class=" col  p-3">
+                    <form id="form-calculadora-imc"
+                        class="d-flex flex-column align-items-center bg-light border border-primary border-danger border-5 rounded-4 shadow p-3">
+                        <h3 class="m">Calculadora IMC</h3>
+
+                        <div class="mb-3">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text">Peso Kg</span>
+                                <input type="number" class="form-control" id="peso" name="peso" required
+                                    placeholder="Kilogramos">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text">Altura Cm</span>
+                                <input type="number" class="form-control" id="altura" name="altura" required
+                                    placeholder="Centimetros">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mb-2 btn-sm"
+                            id="btn_calcular_masa_corporal">Calcular</button>
+
+                        <div class="mb-1 input-group ">
+                            <input type="text" class="form-control" id="resultado" readonly
+                                aria-placeholder="Resultado">
+                        </div>
+
+                    </form>
+                </div>
+
+                <div id="container_convertidor_moneda" class=" col  p-3">
+                    <form id="form_convertidor_moneda"
+                        class="d-flex flex-column align-items-center bg-light border  border-danger border-5 rounded-4 shadow p-3">
+                        <h3 class="mb-3">Conversor Divisa</h3>
+
+                        <div class="mb-3">
+                            <label for="dolarEstadounidense" class="form-label mb-1">
+                                Dolar Estadounidense
+                            </label>
+
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text">USD</span>
+                                <input type="number" class="form-control" id="dolarEstadounidense"
+                                    name="dolarEstadounidense">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pesoColombiano" class="form-label mb-1">
+                                Peso Colombiano
+                            </label>
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text">COP</span>
+                                <input type="number" class="form-control" id="pesoColombiano" name="pesoColombiano">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                
+
+            </div>
+        </div>
+
+        <div id="container_tareas" class="pb-5">
+            <div class=" container d-flex flex-column align-items-center p-3 bg-primary">
+                <h3 class="m">Mis Tareas</h3>
+
+                <div class=" container d-flex  flex  align-items-center mb-3">
+                    <div class="form-check form-switch mx-3">
+                        <input class="form-check-input" type="checkbox" role="switch" id="notas_realizadas">
+                        <label class="form-check-label" for="notas_realizadas" id="label_realizadas">Mostrar Realizadas</label>
+                    </div>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text">Buscar</span>
+                        <input type="text" class="form-control" id="buscador" name="buscador" placeholder="Buscar Nota">
+                    </div>
+                </div>
+
+                <div id="container_cards" class="container-fluid d-flex flex-wrap justify-content-center "> </div>
+
+            </div>
+        </div>
+
+        <script src="./main.js"></script>
+
+    </main>
+
+    <footer class="d-flex justify-content-around align-items-center text-light text-center text-lg-start bg-dark">
+        <div class="text-center">
+            <a data-mdb-ripple-init class="mx-3" href="https://github.com/ManuelCerquera456/JoseManuelCerqueraEjerciciosJavaScript"
+                role="button">
+                <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="Github"
+                    class="border rounded-5" height="40px">
+            </a>
+            Eventos Manuel Cerquera
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+body {
+    background-color: #00000051;
+}
+
+header {
+    height: 80px;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+}
+
+span>img {
+    width: 20px;
+    height: 20px;
+}
+
+main {
+    min-height: calc(100vh - 160px);
+}
+
+footer {
+    height: 80px;
+}
+
+.card {
+    width: 250px;
+    height: 200px;
+}
+
+.scrollable-text {
+    max-height: 70px; 
+    overflow-y: auto;
+}
